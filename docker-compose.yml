@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  backend01:
+    image: ${DOCKER_REGISTRY-}backend01
+    build:
+      context: .
+      dockerfile: backend01/Dockerfile
+
+  backend011:
+    image: ${DOCKER_REGISTRY-}backend01
+    build:
+      context: .
+      dockerfile: backend01/Dockerfile

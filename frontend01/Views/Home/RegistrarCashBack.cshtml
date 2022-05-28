@@ -1,0 +1,23 @@
+﻿@model modelos.RespostaCashback;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Resgatar CashBack</h1>
+    <form asp-action="RegistrarCashBack">
+        <label>Valor CashBack</label><br />
+        <input type="number"  asp-for="Valor" /><br />
+        <input type="submit" value="Resgatar" class="btn primary" />
+    </form>
+
+    @if (Model != null)
+    {
+        <label>@Model.Id</label><br />
+        <label>@Model.Status</label><br />
+        <label>@Model.Valor</label><br />
+    }
+</div>
